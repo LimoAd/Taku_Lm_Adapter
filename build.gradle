@@ -1,0 +1,23 @@
+// Top-level build file. Applies the Android Gradle Plugin for all modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.5.2"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "https://jfrog.anythinktech.com/artifactory/debugger" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

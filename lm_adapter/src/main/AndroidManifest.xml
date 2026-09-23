@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- TopOn/Taku SDK and the AdbidAdx SDK are provided by the host application.
+         The host app bundles adbid_sdk.aar (in app/libs), which brings its own
+         manifest components (AdbidInitProvider, AdbidFileProvider, activities,
+         permissions) via the manifest merger. -->
+
+</manifest>

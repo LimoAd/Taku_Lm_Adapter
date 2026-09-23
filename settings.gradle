@@ -1,0 +1,4 @@
+rootProject.name = "Taku_Lm_Adapter"
+include ':adapter'
+include ':lm_adapter'
+include ':app'
