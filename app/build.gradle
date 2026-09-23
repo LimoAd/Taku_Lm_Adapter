@@ -71,8 +71,6 @@ dependencies {
     implementation files('libs/adbid_sdk_2.1.0.24_0923_1850.aar')                        // AdbidAdx SDK
     implementation project(':lm_adapter')
 
-    // ---------- 腾讯优量汇（GDT）----------
-    implementation files('libs/union-4.671.1541.aar')
-    implementation project(':adapter')
+
 
 }
