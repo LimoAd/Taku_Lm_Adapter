@@ -1,4 +1,4 @@
-package com.anythink.custom.adapter;
+package com.anythink.network.lm;
 
 import android.app.Activity;
 import android.content.Context;
@@ -182,6 +182,11 @@ public class LMATSplashAdapter extends CustomSplashAdapter {
     @Override
     public String getNetworkSDKVersion() {
         return LMATInitManager.getInstance().getNetworkVersion();
+    }
+
+    @Override
+    public int baseOnAdapterBridgeVersion() {
+        return LMATInitManager.getInstance().getAdapterBridgeVersion();
     }
 
     @Override

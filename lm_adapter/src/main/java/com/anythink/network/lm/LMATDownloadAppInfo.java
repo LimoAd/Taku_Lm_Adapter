@@ -1,4 +1,4 @@
-package com.anythink.custom.adapter;
+package com.anythink.network.lm;
 
 import com.adbid.media.nativeAd.AdbidNativeAppInfo;
 import com.anythink.core.api.ATAdAppInfo;

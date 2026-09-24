@@ -1,4 +1,4 @@
-package com.anythink.custom.adapter;
+package com.anythink.network.lm;
 
 import android.app.Activity;
 import android.content.Context;
@@ -172,6 +172,11 @@ public class LMATRewardedVideoAdapter extends CustomRewardVideoAdapter {
                 e.printStackTrace();
             }
         }
+    }
+
+    @Override
+    public int baseOnAdapterBridgeVersion() {
+        return LMATInitManager.getInstance().getAdapterBridgeVersion();
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.anythink.custom.adapter;
+package com.anythink.network.lm;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -167,6 +167,11 @@ public class LMATBannerAdapter extends CustomBannerAdapter {
     @Override
     public String getNetworkSDKVersion() {
         return LMATInitManager.getInstance().getNetworkVersion();
+    }
+
+    @Override
+    public int baseOnAdapterBridgeVersion() {
+        return LMATInitManager.getInstance().getAdapterBridgeVersion();
     }
 
     @Override

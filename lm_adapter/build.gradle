@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 
 android {
-    namespace "com.anythink.custom.adapter"
+    namespace "com.anythink.network.lm"
     compileSdkVersion 34
 
     defaultConfig {
