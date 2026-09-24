@@ -128,6 +128,16 @@ public class NativePatchVideoActivity extends Activity {
             }
 
             @Override
+            public void onAdActRewardSuccess(ATAdInfo atAdInfo) {
+
+            }
+
+            @Override
+            public void onAdActReward(ATAdInfo atAdInfo, int i) {
+
+            }
+
+            @Override
             public void onAdImpressed(ATNativeAdView view, ATAdInfo entity) {
                 Log.i(TAG, "native ad onAdImpressed:\n" + entity.toString());
                 Toast.makeText(NativePatchVideoActivity.this, "[原生Patch] onAdImpressed: " + (entity != null ? entity.toString() : ""), Toast.LENGTH_SHORT).show();

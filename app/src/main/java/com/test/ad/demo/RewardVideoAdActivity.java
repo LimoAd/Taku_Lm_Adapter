@@ -424,8 +424,6 @@ public class RewardVideoAdActivity extends BaseActivity implements View.OnClickL
         } else if (viewId == R.id.is_ad_ready_btn) {
             isAdReady();
         } else if (viewId == R.id.show_ad_btn) {
-            // 激励视频广告场景上报（与原代码一致）
-            ATRewardVideoAd.entryAdScenario(mCurrentPlacementId, AdConst.SCENARIO_ID.REWARD_VIDEO_AD_SCENARIO);
             // 广告实例非空且就绪判断（保留原嵌套逻辑）
             if (mRewardVideoAd != null && mRewardVideoAd.isAdReady()) {
                 showAd();

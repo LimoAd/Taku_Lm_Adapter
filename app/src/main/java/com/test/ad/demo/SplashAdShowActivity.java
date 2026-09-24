@@ -99,8 +99,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
         if (splashAd.isAdReady()) {
             Log.i(TAG, "SplashAd is ready to show.");
-            //splashAd.show(SplashAdShowActivity.this, container);
-            //showAdWithCustomSkipView();//show with customSkipView
             splashAd.show(SplashAdShowActivity.this, container, null, getATShowConfig());
         } else {
             Log.i(TAG, "SplashAd isn't ready to show, start to request.");
@@ -156,7 +154,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
 
     @Override
     public void onBackPressed() {
-//        super.onBackPressed();
     }
 
     private ATShowConfig getATShowConfig() {
@@ -178,6 +175,11 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         Toast.makeText(getApplicationContext(), "[开屏] onDownloadConfirm: " + (adInfo != null ? adInfo.toString() : ""), Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    public void onSplashAdReward(ATAdInfo atAdInfo) {
+
+    }
+
     private void showAdWithCustomSkipView() {
         TextView skipView = findViewById(R.id.splash_ad_skip);
 
@@ -185,20 +187,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
         long callbackInterval = 1000;
         skipView.setText(((int) (countDownDuration / 1000)) + "s | Skip");
 
-//        splashAd.show(this, container, new ATSplashSkipInfo(skipView, countDownDuration, callbackInterval, new ATSplashSkipAdListener() {
-//            @Override
-//            public void onAdTick(long duration, long remainder) {
-//                skipView.setText(((int) (remainder / 1000)) + "s | Skip");
-//            }
-//
-//            @Override
-//            public void isSupportCustomSkipView(boolean isSupport) {
-//                Log.i(TAG, "isSupportCustomSkipView: " + isSupport);
-//                if (isSupport) {
-//                    skipView.setVisibility(View.VISIBLE);
-//                }
-//            }
-//        }));
 
         splashAd.show(this, container, new ATSplashSkipInfo(skipView, countDownDuration, callbackInterval, new ATSplashSkipAdListener() {
             @Override
@@ -236,9 +224,6 @@ public class SplashAdShowActivity extends Activity implements ATSplashExListener
             jumpToMainActivity();
             return;
         }
-
-//        splashAd.show(this, container);
-//        showAdWithCustomSkipView();//show with customSkipView
         splashAd.show(this, container, null, getATShowConfig());
     }
 

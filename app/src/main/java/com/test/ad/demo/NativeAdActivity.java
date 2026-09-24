@@ -247,7 +247,6 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
         } else if (viewId == R.id.is_ad_ready_btn) {
             isAdReady();
         } else if (viewId == R.id.show_ad_btn) {
-            ATNative.entryAdScenario(mCurrentPlacementId, AdConst.SCENARIO_ID.NATIVE_AD_SCENARIO);
             if (isAdReady()) {
                 showAd();
             }
@@ -299,6 +298,16 @@ public class NativeAdActivity extends BaseActivity implements View.OnClickListen
                     Log.i(TAG, "onDeeplinkCallback:" + adInfo.toString() + "--status:" + isSuccess);
                     printLogOnUI("onDeeplinkCallback");
                     showToast("[原生] onDeeplinkCallback: isSuccess=" + isSuccess);
+                }
+
+                @Override
+                public void onAdActRewardSuccess(ATAdInfo atAdInfo) {
+
+                }
+
+                @Override
+                public void onAdActReward(ATAdInfo atAdInfo, int i) {
+
                 }
 
                 @Override

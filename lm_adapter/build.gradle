@@ -27,6 +27,6 @@ dependencies {
     // is pulled in by the host app when it depends on this module. The adapter only needs
     // their APIs at compile time, so declare them compileOnly and never bundle them into
     // the produced AAR.
-    compileOnly files('libs/anythink_core-api.jar')
+    compileOnly files('libs/anythink_core_6.6.22.aar')
     compileOnly files('libs/adbid_sdk_2.1.0.24_0923_1850.aar')
 }

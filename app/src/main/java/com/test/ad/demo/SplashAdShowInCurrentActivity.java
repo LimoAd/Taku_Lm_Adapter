@@ -42,7 +42,6 @@ public class SplashAdShowInCurrentActivity extends Activity {
         String placementId = getIntent().getStringExtra("placementId");
         container = findViewById(R.id.splash_ad_container);
 
-        ATSplashAd.entryAdScenario(placementId, "");
 
         initSplash(placementId);
 
@@ -98,6 +97,11 @@ public class SplashAdShowInCurrentActivity extends Activity {
             @Override
             public void onDownloadConfirm(Context context, ATAdInfo adInfo, ATNetworkConfirmInfo networkConfirmInfo) {
                 Toast.makeText(getApplicationContext(), "[开屏] onDownloadConfirm: " + (adInfo != null ? adInfo.toString() : ""), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onSplashAdReward(ATAdInfo atAdInfo) {
+
             }
 
 //            @Override

@@ -157,7 +157,6 @@ public class SplashAdActivity extends BaseActivity implements View.OnClickListen
             return;
         }
         final String placementId = mCurrentPlacementId;
-        ATSplashAd.entryAdScenario(placementId, AdConst.SCENARIO_ID.SPLASH_AD_SCENARIO);
         if (mSplashAd.isAdReady()) {
             Intent intent = new Intent(SplashAdActivity.this, SplashAdShowActivity.class);
             intent.putExtra("placementId", placementId);
@@ -221,6 +220,11 @@ public class SplashAdActivity extends BaseActivity implements View.OnClickListen
             Log.i(TAG, "onDownloadConfirm--------- entity = " + adInfo.toString());
             printLogOnUI("onDownloadConfirm---------");
             showToast("[开屏] onDownloadConfirm: " + (adInfo != null ? adInfo.toString() : ""));
+        }
+
+        @Override
+        public void onSplashAdReward(ATAdInfo atAdInfo) {
+
         }
     }
 }
