@@ -68,8 +68,9 @@ dependencies {
     implementation files('libs/anythink_network_adx_kuying_sdk_necessary_6.5.77.1.1.aar') // Taku ADX 网络适配
 
     // ---------- AdbidAdx（LM 网络；经自定义适配器 lm_adapter 接入）----------
-    implementation files('libs/adbid_sdk_2.1.0.24_0923_1850.aar')                        // AdbidAdx SDK
-    implementation project(':lm_adapter')
+    implementation files('libs/adbid_sdk_2.1.0.24_0929_1720.aar')                        // AdbidAdx SDK
+    implementation files('libs/anythink_network_lm_2.1.0.24.0.1.aar')                        // AdbidAdx SDK
+    //implementation project(':lm_adapter')
 
 
 

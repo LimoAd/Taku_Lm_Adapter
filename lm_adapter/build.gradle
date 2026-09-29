@@ -13,6 +13,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    libraryVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "anythink_network_lm_2.1.0.24.0.1.aar"
+        }
+    }
 }
 
 repositories {
@@ -28,5 +34,5 @@ dependencies {
     // their APIs at compile time, so declare them compileOnly and never bundle them into
     // the produced AAR.
     compileOnly files('libs/anythink_core_6.6.22.aar')
-    compileOnly files('libs/adbid_sdk_2.1.0.24_0923_1850.aar')
+    compileOnly files('libs/adbid_sdk_2.1.0.24_0929_1720.aar')
 }
